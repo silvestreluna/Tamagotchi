@@ -1,3 +1,8 @@
 import '../styles/main.scss';
+import fullPage from './components/fullpage';
 
-console.error('hi');
+const init = () => {
+  fullPage.domBuilder();
+};
+
+init();
