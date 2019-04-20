@@ -1,8 +1,15 @@
 import '../styles/main.scss';
-import fullPage from './components/fullpage';
+import eat from './components/eat';
+import fight from './components/fight';
+import play from './components/play';
+import sleep from './components/sleep';
+
 
 const init = () => {
-  fullPage.domBuilder();
+  eat.domBuilder();
+  fight.domBuilder();
+  play.domBuilder();
+  sleep.domBuilder();
 };
 
 init();
