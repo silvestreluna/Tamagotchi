@@ -5,11 +5,13 @@ body {
 #app {
   display: flex;
   flex-flow: row wrap;
-  flex-basis: auto;
+  border: 10px solid ghostwhite;
+
   #eat {
     background-color: #eaf5ff;
     width: 50%;
     height: 50vh;
+    
   }
 
   #play {
