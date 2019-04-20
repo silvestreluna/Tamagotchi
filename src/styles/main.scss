@@ -1,14 +1,32 @@
+body {
+  background-color: #1d1919;
+}
+
 #app {
-  background-color: aqua;
-  width: 100%;
-  
+  display: flex;
+  flex-flow: row wrap;
+  flex-basis: auto;
   #eat {
+    background-color: #eaf5ff;
     width: 50%;
-    float: left;
+    height: 50vh;
   }
-  
-  #fight {
+
+  #play {
+    background-color: #c8e6f5;
     width: 50%;
-    float: left;
+    height: 50vh;
+  }
+
+  #sleep {
+    background-color: #f6f5f5;
+    width: 50%;
+    height: 50vh;
+  }
+
+  #fight {
+    background-color: #d7f7f5;
+    width: 50%;
+    height: 50vh;
   }
 }
