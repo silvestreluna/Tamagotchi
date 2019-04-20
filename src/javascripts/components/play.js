@@ -1,11 +1,9 @@
 import util from '../helpers/util';
 
 const domBuilder = () => {
-  let domString = '<div>';
-  domString += '<h3>Play</h3>';
-  domString += '<button>Healthy Food</button>';
-  domString += '<button>Unhealthy food</button>';
-  domString += '</div>';
+  let domString = '<h3>Play</h3>';
+  domString += '<button>Super Fun</button>';
+  domString += '<button>Just Fun</button>';
   util.printToDom('play', domString);
 };
 

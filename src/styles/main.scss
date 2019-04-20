@@ -1,3 +1,14 @@
 #app {
   background-color: aqua;
+  width: 100%;
+  
+  #eat {
+    width: 50%;
+    float: left;
+  }
+  
+  #fight {
+    width: 50%;
+    float: left;
+  }
 }
