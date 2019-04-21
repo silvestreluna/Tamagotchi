@@ -4,13 +4,12 @@ let full = 100;
 
 const addHealthyFood = () => {
   const add = 10;
-
-  if (full >= 100) {
+  const total = full + add;
+  if (total >= 100) {
     full = 100;
     document.getElementById('eatButton').disabled = true;
-  } else if (full < 100) {
+  } else if (total < 100) {
     document.getElementById('eatButton').disabled = false;
-    const total = full + add;
     console.error(total);
     full = total;
   }
