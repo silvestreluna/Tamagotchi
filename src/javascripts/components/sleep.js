@@ -31,10 +31,12 @@ const addEvent = () => {
 
 
 const domBuilder = () => {
-  let domString = '<h3>Sleep</h3>';
+  let domString = '<div id="sleepDiv">';
+  domString += '<h3>Sleep</h3>';
   domString += '<p id="sleepScore">50</p>';
   domString += '<button id="nap">Nap</button>';
   domString += '<button id="slumber">Deep slumber</button>';
+  domString += '</div>';
   util.printToDom('sleep', domString);
   addEvent();
 };
