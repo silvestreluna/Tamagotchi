@@ -3,6 +3,7 @@ import eat from './components/eat';
 import fight from './components/fight';
 import play from './components/play';
 import sleep from './components/sleep';
+import pet from './components/pet';
 
 
 const init = () => {
@@ -10,6 +11,7 @@ const init = () => {
   fight.domBuilder();
   play.domBuilder();
   sleep.domBuilder();
+  pet.domBuilder();
 };
 
 init();

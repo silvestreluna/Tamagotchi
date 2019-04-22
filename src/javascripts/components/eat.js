@@ -3,44 +3,45 @@ import util from '../helpers/util';
 let full = 100;
 
 const addHealthyFood = () => {
+  document.getElementById('badFood').disabled = false;
   const add = 10;
   const total = full + add;
   if (total >= 100) {
     full = 100;
-    document.getElementById('eatButton').disabled = true;
+    document.getElementById('goodFood').disabled = true;
   } else if (total < 100) {
-    document.getElementById('eatButton').disabled = false;
-    console.error(total);
+    document.getElementById('goodFood').disabled = false;
     full = total;
   }
   util.printToDom('score', `<p>${full}</p>`);
 };
 
 const unhealthyFood = () => {
-  document.getElementById('eatButton').disabled = false;
+  document.getElementById('goodFood').disabled = false;
   const badFood = 3;
   const total = full - badFood;
-  if (total <= 100) {
+  if (total <= 0) {
+    full = 0;
+    document.getElementById('badFood').disabled = true;
+  } else if (total >= 0) {
     full = total;
-  } else if (total >= 100) {
-    full = 100;
   }
   util.printToDom('score', `<p>${full}</p>`);
 };
 
 
 const addEvent = () => {
-  const goodFood = document.getElementById('eatButton');
-  const badFood = document.getElementById('badFood');
-  goodFood.addEventListener('click', addHealthyFood);
-  badFood.addEventListener('click', unhealthyFood);
+  const goodFoodEvent = document.getElementById('goodFood');
+  const badFoodEvent = document.getElementById('badFood');
+  goodFoodEvent.addEventListener('click', addHealthyFood);
+  badFoodEvent.addEventListener('click', unhealthyFood);
 };
 
 const domBuilder = () => {
   let domString = '<div>';
   domString += '<h3>Eat</h3>';
-  domString += '<div id="score">100</div>';
-  domString += '<button id="eatButton">Healthy Food</button>';
+  domString += '<p id="score">100</p>';
+  domString += '<button id="goodFood">Healthy Food</button>';
   domString += '<button id="badFood">Unhealthy food</button>';
   domString += '</div>';
   util.printToDom('eat', domString);
