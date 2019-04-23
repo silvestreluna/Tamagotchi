@@ -1,6 +1,6 @@
 import util from '../helpers/util';
 
-const scores = 49;
+const scores = 100;
 
 const domBuilder = () => {
   if (scores <= 50) {
