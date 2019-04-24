@@ -11,7 +11,7 @@ const init = () => {
   fight.domBuilder();
   play.domBuilder();
   sleep.domBuilder();
-  // pet.getValue();
+  pet.getValue();
   pet.domBuilder();
 };
 
