@@ -19,7 +19,9 @@ const addPoints = (e) => {
       energy = slumberTotal;
     }
   }
-  util.printToDom('sleepScore', energy);
+  let domString = `<label id="sleepLabel"  for="scoresSleep">${energy}</label> <br>`;
+  domString += `<progress id="scoresSleep" max="100" value="${energy}"></progress>`;
+  util.printToDom('sleepProgress', domString);
 };
 
 const addEvent = () => {
@@ -33,9 +35,12 @@ const addEvent = () => {
 const domBuilder = () => {
   let domString = '<div id="sleepDiv">';
   domString += '<h3>Sleep</h3>';
-  domString += '<p id="sleepScore">50</p>';
-  domString += '<button id="nap">Nap</button>';
-  domString += '<button id="slumber">Deep slumber</button>';
+  domString += '<div id="sleepProgress">';
+  domString += '<label id="sleepLabel" for="scoresSleep">50</label> <br>';
+  domString += '<progress id="scoresSleep" max="100" value="50"></progress>';
+  domString += '</div>';
+  domString += '<button id="nap" class="scoreButtons">Nap</button>';
+  domString += '<button id="slumber" class="scoreButtons">Deep slumber</button>';
   domString += '</div>';
   util.printToDom('sleep', domString);
   addEvent();

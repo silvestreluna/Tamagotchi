@@ -19,7 +19,11 @@ const addPoints = (e) => {
       fun = lessTotal;
     }
   }
-  util.printToDom('scores', fun);
+  // util.printToDom('scores', fun);
+
+  let domString = `<label id="playNum" for="scoresPlay">${fun}</label> <br>`;
+  domString += `<progress id="scoresPlay" max="100" value="${fun}"></progress>`;
+  util.printToDom('playProgress', domString);
 };
 
 const addEvent = () => {
@@ -32,9 +36,12 @@ const addEvent = () => {
 
 const domBuilder = () => {
   let domString = '<h3>Play</h3>';
-  domString += '<p id="scores">50</p>';
-  domString += '<button id="extraFun">Super Fun</button>';
-  domString += '<button id="lessFun">Just Fun</button>';
+  domString += '<div id="playProgress">';
+  domString += '<label id="playNum" for="scoresFight">50</label> <br>';
+  domString += '<progress id="scoresFight" max="100" value="50"></progress>';
+  domString += '</div>';
+  domString += '<button id="extraFun" class="scoreButtons">Super Fun</button>';
+  domString += '<button id="lessFun" class="scoreButtons">Just Fun</button>';
   util.printToDom('play', domString);
   addEvent();
 };

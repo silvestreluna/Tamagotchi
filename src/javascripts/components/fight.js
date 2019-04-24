@@ -21,7 +21,9 @@ const addPoints = (e) => {
       strength = fightTotal;
     }
   }
-  util.printToDom('fightScore', strength);
+  let domString = `<label id="fightLabel" for="fightProgress">${strength}</label> <br>`;
+  domString += `<progress id="fightProgress" max="100" value="${strength}"></progress>`;
+  util.printToDom('fightProgress', domString);
 };
 
 const addEvent = () => {
@@ -34,9 +36,12 @@ const addEvent = () => {
 
 const domBuilder = () => {
   let domString = '<h3>Fight</h3>';
-  domString += '<p id="fightScore">100</p>';
-  domString += '<button id="runBtn">Run</button>';
-  domString += '<button id="fightBtn">Fight</button>';
+  domString += '<div id="fightProgress">';
+  domString += '<label id="fightLabel" for="scoresPlay">100</label> <br>';
+  domString += '<progress id="scoresPlay" max="100" value="100"></progress>';
+  domString += '</div>';
+  domString += '<button id="runBtn" class="scoreButtons">Run</button>';
+  domString += '<button id="fightBtn" class="scoreButtons">Fight</button>';
   util.printToDom('fight', domString);
   addEvent();
 };
