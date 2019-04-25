@@ -5,8 +5,6 @@ body {
 #app {
   display: flex;
   flex-flow: row wrap;
-  border: 10px solid red;
-
   #eat {
     background-color: #eaf5ff;
     width: 50%;
@@ -28,7 +26,6 @@ body {
     width: 50%;
     height: 50vh;
     text-align: center;
-
   }
 
   #fight {
@@ -37,8 +34,10 @@ body {
     height: 50vh;
     text-align: center;
   }
+  
   h3 {
     margin-top: 100px;
+    font-size: 30px;
   }
 
   #art {
@@ -46,7 +45,7 @@ body {
     width: 300px;
     height: 200px;
     z-index: 15;
-    top: 40%;
+    top: 56%;
     left: 50%;
     margin: -100px 0 0 -150px;
   }
@@ -56,7 +55,7 @@ body {
     width: 300px;
     height: 200px;
     z-index: 15;
-    top: 40%;
+    top: 56%;
     left: 50%;
     margin: -100px 0 0 -150px;
   }
@@ -81,6 +80,49 @@ body {
 	background: transparent;
 	box-shadow:
 	48px 0px #000000,72px 0px #000000,24px 24px #000000,48px 24px #000000,72px 24px #000000,96px 24px #000000,120px 48px #000000,144px 48px #000000,168px 48px #000000,192px 24px #000000,216px 24px #000000,240px 24px #000000,216px 0px #000000,240px 0px #000000,264px 24px #000000,264px 48px #000000,264px 72px #000000,24px 48px #000000,24px 72px #000000,48px 48px #000000,72px 48px #000000,96px 48px #000000,192px 48px #000000,216px 48px #000000,240px 48px #000000,48px 72px #000000,24px 96px #000000,240px 72px #000000,264px 96px #000000,0px 120px #000000,0px 144px #000000,24px 168px #000000,0px 192px #000000,24px 216px #000000,48px 216px #000000,24px 240px #000000,48px 264px #000000,72px 288px #000000,72px 312px #000000,72px 336px #000000,96px 312px #000000,96px 336px #000000,96px 288px #000000,120px 288px #000000,144px 288px #000000,168px 288px #000000,168px 312px #000000,168px 336px #000000,192px 336px #000000,216px 336px #000000,192px 312px #000000,192px 288px #000000,216px 288px #000000,216px 312px #000000,288px 120px #000000,288px 144px #000000,264px 168px #000000,264px 192px #000000,240px 192px #000000,216px 192px #000000,216px 168px #000000,264px 216px #000000,264px 240px #000000,240px 264px #000000,120px 312px #000000,120px 336px #000000,96px 96px #000000,168px 96px #000000,120px 168px #000000,144px 168px #000000,96px 192px #000000,168px 192px #000000;
+}
+
+progress {
+  display: block; /* default: inline-block */
+  width: 225px;
+  margin: 2em auto;
+  border: 0 none;
+  background: #444;
+  border-radius: 14px;
+  box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,0.2);
+}
+progress::-moz-progress-bar {
+  border-radius: 12px;
+  background: #FFF;
+  box-shadow: inset 0 -2px 4px rgba(0,0,0,0.4), 0 2px 5px 0px rgba(0,0,0,0.3);
+}
+/* webkit */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  progress {
+    height: 25px;
+  }
+}
+progress::-webkit-progress-bar {
+    background: transparent;
+}  
+progress::-webkit-progress-value {  
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: inset 0 -2px 4px rgba(0,0,0,0.4), 0 2px 5px 0px rgba(0,0,0,0.3); 
+} 
+
+button {
+
+  background-color: lightcoral;
+  width: 200px;
+  height: 35px;
+  font-size: 20px;
+  border-radius: 100px;
+}
+
+label {
+  color: darkgray;
+  font-size: 40px;
 }
 
 }
