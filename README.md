@@ -2,11 +2,11 @@
 
 ## Description
 
-This web page is a digital virtual pet, like the famous 90's game Tamagotchi.
+This web page is a digital virtual pet, like the famous 90's game, Tamagotchi.
 
-Page is divided into four quadrant. Each quadrant has it's own activity and a progress bar that represent the status of each activities. At the bottom of the page, there's a main progress bar that gets updated based of the status of other activities progress. 
+The page is divided into four quadrants. Each quadrant has its own activity and a progress bar that represent the status of each activity. At the bottom of the page, there is the main progress bar that gets updated based on the status of all the other activities progress. 
 
-Each quadrant have two bottoms that will either increase or decrease the progress percentage. 
+Each quadrant has two bottoms that will either increase or decrease the progress percentage. 
 
 ## Screenshot
 ![Tamagotchi Screenshot](https://raw.githubusercontent.com/silvestreluna/Tamagotchi/master/img/tamagotchi.png)
